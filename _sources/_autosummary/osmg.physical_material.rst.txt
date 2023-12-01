@@ -1,0 +1,31 @@
+osmg.physical\_material
+=======================
+
+.. automodule:: osmg.physical_material
+   :members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :template: custom-class-template.rst
+   
+      PhysicalMaterial
+   
+   
+
+   
+   
+   
+
+
+

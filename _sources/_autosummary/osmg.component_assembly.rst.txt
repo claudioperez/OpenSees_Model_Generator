@@ -1,0 +1,31 @@
+osmg.component\_assembly
+========================
+
+.. automodule:: osmg.component_assembly
+   :members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :template: custom-class-template.rst
+   
+      ComponentAssembly
+   
+   
+
+   
+   
+   
+
+
+

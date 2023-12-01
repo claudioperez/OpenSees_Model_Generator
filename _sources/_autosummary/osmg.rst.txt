@@ -1,0 +1,51 @@
+﻿osmg
+====
+
+.. automodule:: osmg
+   :members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   osmg.common
+   osmg.component_assembly
+   osmg.defaults
+   osmg.gen
+   osmg.get_latest_pypi_version
+   osmg.graphics
+   osmg.ground_motion_utils
+   osmg.level
+   osmg.line
+   osmg.load_case
+   osmg.mesh
+   osmg.model
+   osmg.obj_collections
+   osmg.ops
+   osmg.physical_material
+   osmg.postprocessing
+   osmg.preprocessing
+   osmg.solver
+   osmg.transformations
+

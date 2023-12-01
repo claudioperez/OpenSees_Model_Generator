@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>osmg.common &#8212; osmg 0.2.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=039e1c02" />
+    <script src="../_static/documentation_options.js?v=938c9ccc"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="osmg.component_assembly" href="osmg.component_assembly.html" />
+    <link rel="prev" title="osmg" href="osmg.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-osmg.common">
+<span id="osmg-common"></span><h1>osmg.common<a class="headerlink" href="#module-osmg.common" title="Link to this heading">¶</a></h1>
+<p>Common definitions</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#osmg.common.methods" title="osmg.common.methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">methods</span></code></a>(obj)</p></td>
+<td><p>Returns the names of all methods of an object, excluding the dunder methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#osmg.common.previous_element" title="osmg.common.previous_element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previous_element</span></code></a>(dct, key)</p></td>
+<td><p>Returns the value of the element that comes before the given key in an ordered dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#osmg.common.print_dir" title="osmg.common.print_dir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_dir</span></code></a>(obj)</p></td>
+<td><p>Prints the entire output of <cite>dir()</cite> of an object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#osmg.common.print_methods" title="osmg.common.print_methods"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_methods</span></code></a>(obj)</p></td>
+<td><p>Prints the methods of an object.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="osmg.common.methods">
+<span class="sig-name descname"><span class="pre">methods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/osmg/common.html#methods"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#osmg.common.methods" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the names of all methods of an object,
+excluding the dunder methods.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">TestClass</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">method_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">method_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">TestClass</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">methods</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="go">[&#39;method_1&#39;, &#39;method_2&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="osmg.common.previous_element">
+<span class="sig-name descname"><span class="pre">previous_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.OrderedDict" title="(in Python v3.12)"><span class="pre">OrderedDict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/osmg/common.html#previous_element"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#osmg.common.previous_element" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the value of the element that comes before the given key
+in an ordered dictionary.
+If the key is not in the dictionary, or if it is the first element
+in the dictionary, returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dct</strong> – An ordered dictionary.</p></li>
+<li><p><strong>key</strong> – The key of the element whose previous element we want to</p></li>
+<li><p><strong>find.</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value of the element that comes before the given key in
+the dictionary, or None if there is no such element.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dct</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">previous_element</span><span class="p">(</span><span class="n">dct</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Returns &#39;a&#39;</span>
+<span class="go">&#39;a&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">previous_element</span><span class="p">(</span><span class="n">dct</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Returns &#39;b&#39;</span>
+<span class="go">&#39;b&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">previous_element</span><span class="p">(</span><span class="n">dct</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Returns None</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">previous_element</span><span class="p">(</span><span class="n">dct</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Returns None</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="osmg.common.print_dir">
+<span class="sig-name descname"><span class="pre">print_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/osmg/common.html#print_dir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#osmg.common.print_dir" title="Link to this definition">¶</a></dt>
+<dd><p>Prints the entire output of <cite>dir()</cite> of an object</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="osmg.common.print_methods">
+<span class="sig-name descname"><span class="pre">print_methods</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><span class="pre">object</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/osmg/common.html#print_methods"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#osmg.common.print_methods" title="Link to this definition">¶</a></dt>
+<dd><p>Prints the methods of an object.</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">osmg</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Introductory Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="osmg.html">API reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="osmg.html">osmg</a><ul>
+      <li>Previous: <a href="osmg.html" title="previous chapter">osmg</a></li>
+      <li>Next: <a href="osmg.component_assembly.html" title="next chapter">osmg.component_assembly</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Ioannis Vouvakis Manousakis.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
