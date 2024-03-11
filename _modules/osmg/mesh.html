@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>osmg.mesh &#8212; osmg 0.2.3 documentation</title>
+    <title>osmg.mesh &#8212; osmg 0.2.4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
-    <script src="../../_static/documentation_options.js?v=a47416a6"></script>
+    <script src="../../_static/documentation_options.js?v=6ffd866b"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -393,20 +393,6 @@
 <span class="sd">    vertex that the halfedge originates from.  Halfedges have a `next`</span>
 <span class="sd">    attribute that points to the next halfedge, forming closed loops,</span>
 <span class="sd">    or sequences, which is the purpose of this module.</span>
-
-<span class="sd">    Example:</span>
-<span class="sd">        &gt;&gt;&gt; from osmg.mesh import Vertex, Edge, Halfedge</span>
-<span class="sd">        &gt;&gt;&gt; v1 = Vertex((0, 0))</span>
-<span class="sd">        &gt;&gt;&gt; v2 = Vertex((2, 2))</span>
-<span class="sd">        &gt;&gt;&gt; edge = Edge(v1, v2)</span>
-<span class="sd">        &gt;&gt;&gt; halfedge1 = Halfedge(v1, edge)</span>
-<span class="sd">        &gt;&gt;&gt; halfedge2 = Halfedge(v2, edge)</span>
-<span class="sd">        &gt;&gt;&gt; halfedge1.nxt = halfedge2</span>
-<span class="sd">        &gt;&gt;&gt; halfedge2.nxt = halfedge1</span>
-<span class="sd">        &gt;&gt;&gt; print(halfedge1)</span>
-<span class="sd">        (H0 from E7 to E7 next H1)</span>
-<span class="sd">        &gt;&gt;&gt; print(halfedge2)</span>
-<span class="sd">        (H1 from E7 to E7 next H0)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
