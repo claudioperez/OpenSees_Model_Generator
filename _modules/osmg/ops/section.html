@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>osmg.ops.section &#8212; osmg 0.2.4 documentation</title>
+    <title>osmg.ops.section &#8212; osmg 0.2.6 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=12dfc556" />
-    <script src="../../../_static/documentation_options.js?v=6ffd866b"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/documentation_options.js?v=fc7d8818"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -248,8 +248,7 @@
 
 <div class="viewcode-block" id="SectionComponent.copy_alter_material">
 <a class="viewcode-back" href="../../../_autosummary/osmg.ops.section.html#osmg.ops.section.SectionComponent.copy_alter_material">[docs]</a>
-    <span class="k">def</span> <span class="nf">copy_alter_material</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">mat</span><span class="p">:</span> <span class="n">UniaxialMaterial</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SectionComponent</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">copy_alter_material</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mat</span><span class="p">:</span> <span class="n">UniaxialMaterial</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SectionComponent</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Make a shallow copy of a section component and replace the old</span>
 <span class="sd">        material with the given one.</span>
@@ -349,8 +348,8 @@
 <div class="viewcode-block" id="FiberSection.copy_alter_material">
 <a class="viewcode-back" href="../../../_autosummary/osmg.ops.section.html#osmg.ops.section.FiberSection.copy_alter_material">[docs]</a>
     <span class="k">def</span> <span class="nf">copy_alter_material</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">mat</span><span class="p">:</span> <span class="n">UniaxialMaterial</span><span class="p">,</span>
-            <span class="n">new_uid</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FiberSection</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">mat</span><span class="p">:</span> <span class="n">UniaxialMaterial</span><span class="p">,</span> <span class="n">new_uid</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FiberSection</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a shallow copy of the section object in which all</span>
 <span class="sd">        opensees_material objects have been replaced with the given</span>
@@ -411,7 +410,7 @@
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
@@ -419,7 +418,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
 
 
@@ -437,7 +436,7 @@
       &#169;2023, Ioannis Vouvakis Manousakis.
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
     </div>

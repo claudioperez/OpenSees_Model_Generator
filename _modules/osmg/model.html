@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>osmg.model &#8212; osmg 0.2.4 documentation</title>
+    <title>osmg.model &#8212; osmg 0.2.6 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
-    <script src="../../_static/documentation_options.js?v=6ffd866b"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/documentation_options.js?v=fc7d8818"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -75,9 +75,7 @@
 
 <div class="viewcode-block" id="transfer_component">
 <a class="viewcode-back" href="../../_autosummary/osmg.model.html#osmg.model.transfer_component">[docs]</a>
-<span class="k">def</span> <span class="nf">transfer_component</span><span class="p">(</span>
-        <span class="n">other</span><span class="p">:</span> <span class="n">Model</span><span class="p">,</span>
-        <span class="n">component</span><span class="p">:</span> <span class="n">ComponentAssembly</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">transfer_component</span><span class="p">(</span><span class="n">other</span><span class="p">:</span> <span class="n">Model</span><span class="p">,</span> <span class="n">component</span><span class="p">:</span> <span class="n">ComponentAssembly</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Transfers a single component assembly from one model to</span>
 <span class="sd">    another, assuming the other model was generated with the</span>
@@ -163,12 +161,15 @@
     <span class="n">elastic_sections</span><span class="p">:</span> <span class="n">obj_collections</span><span class="o">.</span><span class="n">Collection</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">ElasticSection</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span>
         <span class="n">init</span><span class="o">=</span><span class="kc">False</span>
     <span class="p">)</span>
-    <span class="n">fiber_sections</span><span class="p">:</span> <span class="n">obj_collections</span><span class="o">.</span><span class="n">Collection</span><span class="p">[</span>
-        <span class="nb">int</span><span class="p">,</span> <span class="n">FiberSection</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">fiber_sections</span><span class="p">:</span> <span class="n">obj_collections</span><span class="o">.</span><span class="n">Collection</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">FiberSection</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span>
+        <span class="n">init</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
     <span class="n">uniaxial_materials</span><span class="p">:</span> <span class="n">obj_collections</span><span class="o">.</span><span class="n">Collection</span><span class="p">[</span>
-        <span class="nb">int</span><span class="p">,</span> <span class="n">UniaxialMaterial</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="nb">int</span><span class="p">,</span> <span class="n">UniaxialMaterial</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">physical_materials</span><span class="p">:</span> <span class="n">obj_collections</span><span class="o">.</span><span class="n">Collection</span><span class="p">[</span>
-        <span class="nb">int</span><span class="p">,</span> <span class="n">PhysicalMaterial</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="nb">int</span><span class="p">,</span> <span class="n">PhysicalMaterial</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">uid_generator</span><span class="p">:</span> <span class="n">UIDGenerator</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">UIDGenerator</span><span class="p">)</span>
     <span class="n">settings</span><span class="p">:</span> <span class="n">Settings</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">Settings</span><span class="p">)</span>
 
@@ -388,8 +389,8 @@
 <div class="viewcode-block" id="Model.dict_of_specific_element">
 <a class="viewcode-back" href="../../_autosummary/osmg.model.html#osmg.model.Model.dict_of_specific_element">[docs]</a>
     <span class="k">def</span> <span class="nf">dict_of_specific_element</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">element_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">])</span> \
-            <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">]:</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">element_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a dictionary of all element objects in the model of a</span>
 <span class="sd">        particular element class.</span>
@@ -408,8 +409,8 @@
 <div class="viewcode-block" id="Model.list_of_specific_element">
 <a class="viewcode-back" href="../../_autosummary/osmg.model.html#osmg.model.Model.list_of_specific_element">[docs]</a>
     <span class="k">def</span> <span class="nf">list_of_specific_element</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">element_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">])</span> \
-            <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">]:</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">element_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">element</span><span class="o">.</span><span class="n">Element</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a list of all element objects in the model of a</span>
 <span class="sd">        particular element class.</span>
@@ -482,7 +483,8 @@
 <div class="viewcode-block" id="Model.transfer_by_polygon_selection">
 <a class="viewcode-back" href="../../_autosummary/osmg.model.html#osmg.model.Model.transfer_by_polygon_selection">[docs]</a>
     <span class="k">def</span> <span class="nf">transfer_by_polygon_selection</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Model</span><span class="p">,</span> <span class="n">coords</span><span class="p">:</span> <span class="n">nparr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Model</span><span class="p">,</span> <span class="n">coords</span><span class="p">:</span> <span class="n">nparr</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Uses :func:`~transfer_component` to transfer all components of which</span>
 <span class="sd">        the projection to the XY plane falls inside the specified</span>
@@ -541,7 +543,7 @@
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
@@ -549,7 +551,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
 
 
@@ -567,7 +569,7 @@
       &#169;2023, Ioannis Vouvakis Manousakis.
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
     </div>
